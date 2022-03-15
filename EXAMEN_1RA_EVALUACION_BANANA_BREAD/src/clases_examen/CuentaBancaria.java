@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author emiliomurillo
+ * @author José Sebastian López Ibarra & Sebastian Emilio Murillo Andrade
  */
 
 class CuentaBancaria {

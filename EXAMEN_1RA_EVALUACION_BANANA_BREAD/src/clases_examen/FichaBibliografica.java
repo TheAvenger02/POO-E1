@@ -14,19 +14,19 @@ import java.util.Scanner;
 public class FichaBibliografica {
     private String autor;
     private String título;
-    private int año;
+    private String año;
     private String ciudad;
     private String editorial;
 
     public FichaBibliografica() {
-        autor = "Wojtyla, K";
-        título = "Amor y responsabilidad";
-        año = 2016;
-        ciudad = "Madrid";
-        editorial = "Palabra";
+        this.autor = "Wojtyla, K";
+        this.título = "Amor y responsabilidad";
+        this.año = "2016";
+        this.ciudad = "Madrid";
+        this.editorial = "Palabra";
     }
 
-    public FichaBibliografica(String autor, String título, int año, String ciudad, String editorial) {
+    public FichaBibliografica(String autor, String título, String año, String ciudad, String editorial) {
         this.autor = autor;
         this.título = título;
         this.año = año;
@@ -50,11 +50,11 @@ public class FichaBibliografica {
         this.título = título;
     }
 
-    public int getAño() {
+    public String getAño() {
         return año;
     }
 
-    public void setAño(int año) {
+    public void setAño(String año) {
         this.año = año;
     }
 
@@ -74,9 +74,9 @@ public class FichaBibliografica {
         this.editorial = editorial;
     }
     
-    public static void imprimirFicha(){
+    public void imprimirFicha(){
        FichaBibliografica datosLibro = new FichaBibliografica();
- 
        System.out.println(datosLibro.getAutor()+". "+"("+datosLibro.getAño()+"). " + datosLibro.getTítulo()+". " + datosLibro.getCiudad()+": " + datosLibro.getEditorial()+"." + "\n");
+       System.out.println(autor+". "+"("+año+"). " + título+". " + ciudad+": " + editorial+"." + "\n");
     }   
 }

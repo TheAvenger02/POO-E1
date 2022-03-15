@@ -40,18 +40,19 @@ public class EXAMEN_1RA_EVALUACION_BANANA_BREAD {
         System.out.println("Título: ");
         String título = sc.nextLine();
         System.out.println("Año: ");
-        int año = sc.nextInt();
+        String año = sc.nextLine();
         System.out.println("Ciudad: ");
         String ciudad = sc.nextLine();
         System.out.println("Editorial: ");
         String editorial = sc.nextLine();
         
-        FichaBibliografica datosLibro = new FichaBibliografica();
+        FichaBibliografica datosLibro = new FichaBibliografica(autor, título, año, ciudad, editorial);
         datosLibro.setAutor(autor);
         datosLibro.setTítulo(título);
         datosLibro.setAño(año);
         datosLibro.setCiudad(ciudad);
         datosLibro.setEditorial(editorial);
+        datosLibro.imprimirFicha();
         
         System.out.println("Ingrese su edad:");
         int edad = sc.nextInt();
@@ -163,60 +164,7 @@ class DatosIntegrantes{
     public static void imprimirProblemasResueltos(){
         imprimirDatosEquipo();
         Pelicula.imprimirDatosPelicula();
-        FichaBibliografica.imprimirFicha();
+        // FichaBibliografica.imprimirFicha();
         Empleado.imprimirDatos();
     }
 }
-
-/* class TestCovid{
-    private int edad;
-    private boolean tieneEnfermedadCronica;
-    private double peso;
-    private double estatura;
-
-    public int getEdad() {
-        return edad;
-    }
-
-    public void setEdad(int edad) {
-        this.edad = edad;
-    }
-
-    public boolean isTieneEnfermedadCronica() {
-        return tieneEnfermedadCronica;
-    }
-
-    public void setTieneEnfermedadCronica(boolean tieneEnfermedadCronica) {
-        this.tieneEnfermedadCronica = tieneEnfermedadCronica;
-    }
-
-    public double getPeso() {
-        return peso;
-    }
-
-    public void setPeso(double peso) {
-        this.peso = peso;
-    }
-
-    public double getEstatura() {
-        return estatura;
-    }
-
-    public void setEstatura(double estatura) {
-        this.estatura = estatura;
-    }
- 
-    public String calcularPersonaRiesgo(){
-        private double operaciónIMC(double IMC){
-        IMC = peso / (estatura*estatura);   
-        return IMC;
-        }
-        if(edad >= 65 && tieneEnfermedadCronica == True && IMC > 30){
-            System.out.println("PERSONA DE RIESGO");
-        }
-        else{
-            System.out.println("PERSONA SIN RIESGO");
-        }
-    }
-}
-*/
